@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+    /* CSS初始化 */
+    body,div,ul,li,h1,h2,p{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    li {
+        list-style: none;
+    }
+    img {
+        border: 0 none;
+        vertical-align: top;
+    }
+    body {
+        font-family: "Microsoft Yahei",sans-serif;
+        font-size: 16px;
+        color: #6f6f6f;
+        background:#f4fbfb;
+    }
+    .clearfix {
+        *zoom: 1;
+    }
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+    #box{
+        width: 550px;
+        border: 5px solid #000;
+        height: 610px;
+        position: absolute;
+        left:-33px;
+        top:-33px;
+    }
+    #box li{
+        width: 60px;
+        height: 60px;
+        background-color:#c60;
+        float: left;
+        position: relative;
+        cursor: pointer;
+    }
+    #box li:nth-child(85):after{
+        display: block;
+        width: 168px;
+        height: 1px;
+        background-color: #000;
+        position: absolute;
+        left:5px;
+        top:-32px;
+        content: " ";
+        -webkit-transform: rotate(45deg);
+        z-index: 99;
+    }
+    #box li:nth-child(85):before{
+        display: block;
+        width: 168px;
+        height: 1px;
+        background-color: #000;
+        position: absolute;
+        left:5px;
+        top:-32px;
+        content: " ";
+        -webkit-transform: rotate(-45deg);
+    }
+    #box li:nth-child(4):after{
+        display: block;
+        width: 168px;
+        height: 1px;
+        background-color: #000;
+        position: absolute;
+        left:5px;
+        top:89px;
+        content: " ";
+        -webkit-transform: rotate(45deg);
+        z-index: 99;
+    }
+    #box li:nth-child(4):before{
+        display: block;
+        width: 168px;
+        height: 1px;
+        background-color: #000;
+        position: absolute;
+        left:5px;
+        top:89px;
+        content: " ";
+        z-index: 99;
+        -webkit-transform: rotate(-45deg);
+    }
+    .zk{
+        position: relative;
+        width: 480px;
+        height: 540px;
+        background-color:#fff;
+        margin:60px auto 0;
+    }
+    .line{
+         width: 100%;
+         height: 50%;
+         border-bottom: 2px solid #000;
+         position: absolute;
+         left:0;
+         top:0;
+     }
+    .list{
+        width: 50%;
+        height: 100%;
+        border-right: 2px solid #000;
+        position: absolute;
+        left:0;
+        top:0;
+    }
+    .flash{
+        animation:  twinkling 1s infinite ease-in-out;
+    }
+    .playR{
+        border: 3px red solid;
+        color: red;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #fff;
+        font-weight: 600;
+        text-align: center;
+        line-height: 34px;
+        position: absolute;
+        top:10px;
+        left:10px;
+        z-index: 100;
+        font-size: 23px;
+        -webkit-transform: rotate(-180deg); /* Safari 3.1+, Chrome */
+        cursor: pointer;
+    }
+    .playB{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #fff;
+        font-weight: 600;
+        text-align: center;
+        line-height: 34px;
+        position: absolute;
+        top:10px;
+        left:10px;
+        z-index: 100;
+        font-size: 23px;
+        border: 3px blue solid;
+        color: blue;
+        cursor: pointer;
+    }
+    @-webkit-keyframes twinkling{    /*透明度由0到1*/
+        0%{
+            opacity:1; /*透明度为0*/
+
+        }
+        100%{
+            opacity:0; /*透明度为1*/
+        }
+    }
+</style>
+<body>
+    <div class="zk" >
+        <ul id="box" class="clearfix">
+        </ul>
+    </div>
+<script src="game.js"></script>
+</body>
+</html>
